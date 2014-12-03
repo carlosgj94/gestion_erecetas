@@ -1,0 +1,22 @@
+.formulario{
+  padding-top:5%;
+
+  max-width:50%;
+}
+
+.acceder{
+  margin-top:3%;
+  font-size:20px;
+}
+.content{
+  background-color:white;
+}
+
+.title{
+  font-size:20px;
+  background-color:#e74c3c;
+  color:white;
+}
+.usuario{
+    color:white;
+ }
