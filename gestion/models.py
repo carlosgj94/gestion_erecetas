@@ -1,10 +1,7 @@
 from django.db import models
 
 # Create your models here.
-#receta
-#medico
-#farmaceutico
-#paciente
+
 
 
 class Medico(models.Model):
@@ -13,8 +10,8 @@ class Medico(models.Model):
     """
     nombre= models.CharField(max_length=50)
     age= models.DateField()
-    hospital = models.CharField()
-    especialidad = models.CharField()
+    hospital = models.CharField(max_length=50)
+    especialidad = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nombre
@@ -28,7 +25,7 @@ class Farmaceutico(models.Model):
     """
     nombre= models.CharField(max_length=50)
     age= models.DateField()
-
+    calleDeFarmacia= models.CharField(max_length=100)
     def __str__(self):
         return self.nombre
 
@@ -56,11 +53,11 @@ class Receta(models.Model):
     medico = models.ForeignKey('Medico')
     paciente = models.ForeignKey('Paciente', on_delete=models.PROTECT)
     farmaceutico = models.ForeignKey('Farmaceutico', null=True)
-    farmacos = models.CharField()
+    farmacos = models.CharField(max_length=100)
     duracionDias = models.IntegerField()
     unidades = models.IntegerField()
     cadaCuantasHoras = models.IntegerField()
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name_plural = "Cities"
+        verbose_name_plural = "Recetas"
