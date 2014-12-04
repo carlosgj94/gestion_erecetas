@@ -59,6 +59,6 @@ class Receta(models.Model):
     unidades = models.IntegerField()
     cadaCuantasHoras = models.IntegerField()
     def __str__(self):
-        return self.name
+        return self.paciente.nombre+': '+self.farmacos
     class Meta:
         verbose_name_plural = "Recetas"

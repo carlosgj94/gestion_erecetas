@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +8,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/css/ratchet.min.css">
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/css/ratchet-theme-ios.min.css">
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/nueva_receta.css">
-  <script src="../../gestion/static/gestion/dist/js/ratchet.min.js"></script>
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/nueva_receta.css' %}">
 </head>
 <body>
   <header class="bar bar-nav">
@@ -18,21 +18,21 @@
       Farmacéutico
     </button>
 
-    <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
+    <a href="/"><button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
       <span class="icon icon-home"></span>
-      Sandalio Perez
-    </button>
+        {{ username }}
+    </button></a>
     <h1 class="title">Menú farmacéutico</h1>
   </header>
 
   <div class="content">
     <center>
-      <img src="../../gestion/static/gestion/SaludMadrid.gif" alt="SaludMadrid" style="padding-top:5%;"/>
+      <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
       <div class='formulario'>
         <button class="btn btn-positive btn-outlined acceder" style='margin-right:35px;'>Nuevo cliente</button>
         <button class="btn btn-primary btn-outlined acceder">Revisar stock</button>
         <br>
-        <button class="btn btn-negative btn-outlined acceder" style='margin-top:95px;'>Terminar</button>
+       <a href="/logout"> <button class="btn btn-negative btn-outlined acceder" style='margin-top:95px;'>Terminar</button></a>
       </div>
     </center>
   </div><!-- /.content -->

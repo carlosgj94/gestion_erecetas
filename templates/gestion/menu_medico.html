@@ -20,10 +20,10 @@
         Médico
     </button>
 
-    <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
+    <a href="/"><button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
         <span class="icon icon-home"></span>
         {{ username }}
-    </button>
+    </button></a>
     <h1 class="title">Menú médico</h1>
 </header>
 
@@ -31,10 +31,10 @@
     <center>
         <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
         <div class='formulario'>
-            <a href="/nueva_receta" <button class="btn btn-positive btn-outlined acceder" style='margin-right:35px;'>Nueva receta</button></a>
+            <a href="/nueva-receta" <button class="btn btn-positive btn-outlined acceder" style='margin-right:35px;'>Nueva receta</button></a>
             <button class="btn btn-primary btn-outlined acceder">Modificar receta</button>
             <br>
-            <button class="btn btn-negative btn-outlined acceder" style='margin-top:95px;'>Terminar consulta</button>
+            <a href="/logout"> <button class="btn btn-negative btn-outlined acceder" style='margin-top:95px;'>Terminar</button></a>
         </div>
     </center>
 </div><!-- /.content -->

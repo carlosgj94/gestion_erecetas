@@ -20,7 +20,7 @@
 
     <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
         <span class="icon icon-home"></span>
-        Fulanito Perez
+        {{ username }}
     </button>
     <h1 class="title">Nueva Receta</h1>
 </header>
@@ -28,17 +28,27 @@
 <div class="content">
     <center>
         <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
-        <form class="formulario">
-
-            <input type="text" placeholder="DNI">
-            <input type="text" placeholder="Fármaco">
-            <input type="number" placeholder="Duración en días">
-            <input type="number" placeholder="Duración tratamiento (días/meses)">
+        {% if error %}
+        <h2>{{ error }}</h2>
+        <a href="/"><button class="btn btn-outlined btn-primary acceder">Regresar</button>  </a>
+        {% else %}
+            {% if exito %}
+                <h2>{{ exito }}</h2>
+                {% else %}
+        <form class="formulario" action="/nueva-receta/" method="post">
+            {% csrf_token %}
+            <input type="text" name="dni" placeholder="DNI">
+            <input type="text" name="farmacos" placeholder="Fármacos">
+            <input type="number" name="duracionDias" placeholder="Duración en días">
+            <input type="number" name="unidades" placeholder="Unidades">
+            <input type="number" name="cadaCuantasHoras" placeholder="Cada cuantas horas">
 
 
             <button class="btn btn-outlined btn-primary acceder">Crear Receta</button>
 
         </form>
+                {% endif %}
+        {% endif %}
     </center>
 </div><!-- /.content -->
 </body>
