@@ -58,3 +58,8 @@ class LoginView(View):
                     "error" : "El nombre de usuario o la contraseña son incorrectas.",
                 }
                 return render(request, 'gestion/login.html', context)
+
+class NuevaRecetaView(View):
+    def get(self, request):
+        context={}
+        return render(request, 'gestion/nueva_receta.html', context)
