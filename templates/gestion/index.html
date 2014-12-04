@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +8,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/css/ratchet.min.css">
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/css/ratchet-theme-ios.min.css">
-  <link rel="stylesheet" href="../../gestion/static/gestion/dist/index.css">
+  <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
+  <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
+  <link rel="stylesheet" href="{% static 'gestion/dist/index.css' %}">
   <script src="../../gestion/static/gestion/dist/js/ratchet.min.js"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
 
   <div class="content">
     <center>
-      <img src="../../gestion/static/gestion/SaludMadrid.gif" alt="SaludMadrid" style="padding-top:5%;"/>
+      <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
 
 
     </form>
