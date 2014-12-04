@@ -2,45 +2,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Mail</title>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta charset="utf-8">
+    <title>Mail</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-   <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
-  <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
-  <link rel="stylesheet" href="{% static 'gestion/dist/nueva_receta.css' %}">
-  <script src="../../gestion/static/gestion/dist/js/ratchet.min.js"></script>
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/nueva_receta.css' %}">
 </head>
 <body>
-  <header class="bar bar-nav">
+<header class="bar bar-nav">
     <button class="btn btn-link btn-nav pull-left" style='color:white;margin-left:10px;'>
-      Médico
+        Médico
     </button>
 
     <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
-      <span class="icon icon-home"></span>
-      Fulanito Perez
+        <span class="icon icon-home"></span>
+        Fulanito Perez
     </button>
     <h1 class="title">Nueva Receta</h1>
-  </header>
+</header>
 
-  <div class="content">
+<div class="content">
     <center>
-      <img src="../../gestion/static/gestion/SaludMadrid.gif" alt="SaludMadrid" style="padding-top:5%;"/>
-      <form class="formulario">
+        <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
+        <form class="formulario">
 
-        <input type="text" placeholder="Nombre Paciente">
-        <input type="text" placeholder="DNI">
-        <input type="text" placeholder="Medicamento">
-        <input type="number" placeholder="Duración tratamiento (días/meses)">
+            <input type="text" placeholder="DNI">
+            <input type="text" placeholder="Fármaco">
+            <input type="number" placeholder="Duración en días">
+            <input type="number" placeholder="Duración tratamiento (días/meses)">
 
 
-        <button class="btn btn-outlined btn-primary acceder">Crear Receta</button>
+            <button class="btn btn-outlined btn-primary acceder">Crear Receta</button>
 
-      </form>
+        </form>
     </center>
-  </div><!-- /.content -->
+</div><!-- /.content -->
 </body>
 </html>

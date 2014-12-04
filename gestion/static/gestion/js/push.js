@@ -299,7 +299,7 @@
       _gaq.push(['_trackPageview']); // google analytics
     }
     if (!options.hash) {
-      return;
+
     }
   };
 
