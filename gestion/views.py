@@ -112,18 +112,26 @@ class NuevaRecetaView(View):
              return render(request, 'gestion/nueva_receta.html', context)
         if medico!=None:
             form = request.POST
-            dni = form.get('dni')
+            dniP = form.get('dni')
             farmacos = form.get('farmacos')
             duracion = form.get('duracionDias')
             unidades = form.get("unidades")
             cadaCuantasHoras = form.get('cadaCuantasHoras')
-
+            print(dniP)
             #HAY QUE COMPROBAR AQUI QUE EL FORMULARIO NO ESTA VACIO!
-            pacienteObj = Paciente.objects.get(dni=dni)
+            try:
+                pacienteObj = Paciente.objects.get(dni=dniP)
+            except Paciente.DoesNotExist:
+                pacienteObj=None
             user = request.user
             medicoObj = Medico.objects.get(user=user)
-            Receta.objects.create(medico=medicoObj,paciente=pacienteObj, farmacos=farmacos, duracionDias=duracion, unidades=unidades, cadaCuantasHoras=cadaCuantasHoras )
+            if medicoObj!=None and pacienteObj!=None:
+                Receta.objects.create(medico=medicoObj,paciente=pacienteObj, farmacos=farmacos, duracionDias=duracion, unidades=unidades, cadaCuantasHoras=cadaCuantasHoras )
+                exito="Receta creada con exito"
+            else:
+                exito='La receta no ha podido ser creada.'
             context={
-                "exito": "Receta creada con exito"
+                "exito": exito,
+                "username":user.username
             }
             return render(request, 'gestion/nueva_receta.html', context)
