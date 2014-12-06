@@ -44,7 +44,8 @@
                 <b>Farmacos:</b> {{ receta.farmacos }}<br><br>
                 <b>Duracion:</b> {{ receta.duracionDias }} dias<br><br>
                 <b>Tomas:</b> {{ receta.unidades }} cada {{ receta.cadaCuantasHoras }}<br><br>
-                <b>La ultima vez que fue dispensada fue: </b>{{ receta.fechaDispensacion }}
+
+                <b>La ultima vez que fue dispensada fue: </b>{{ receta.fechaDispensacion|default:"Nunca ha sido dispensada" }}
                 <br><br>
                 <form class="formulario" action="/dispensar-receta/{{ receta.id }}" method="post">
                     {% csrf_token %}

@@ -60,7 +60,7 @@ class Receta(models.Model):
     unidades = models.IntegerField()
     cadaCuantasHoras = models.IntegerField()
     fecha = models.DateTimeField(default=datetime.now,blank=True)
-    fechaDispensacion =  models.DateTimeField(blank=True)
+    fechaDispensacion =  models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.paciente.nombre+': '+self.farmacos
