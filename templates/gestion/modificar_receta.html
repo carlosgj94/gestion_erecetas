@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mail</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/nueva_receta.css' %}">
+</head>
+<body>
+<header class="bar bar-nav">
+    <button class="btn btn-link btn-nav pull-left" style='color:white;margin-left:10px;'>
+        Médico
+    </button>
+
+    <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
+        <span class="icon icon-home"></span>
+        {{ username }}
+    </button>
+    <h1 class="title">Modificar Receta</h1>
+</header>
+
+<div class="content">
+    <center>
+        <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
+        {% if error %}
+        <h2>{{ error }}</h2>
+        <a href="/"><button class="btn btn-outlined btn-primary acceder">Regresar</button>  </a>
+        {% else %}
+            {% if exito %}
+                <h2>{{ exito }}</h2>
+                {% else %}
+        <form class="formulario" action="/modificar-receta/{{ receta.id }}" method="post">
+            {% csrf_token %}
+            <small>Receta a DNI:{{ receta.paciente.dni }} del dia {{ receta.fecha }}</small>
+<br><br>
+            <small>Antiguo: {{ receta.farmacos }}</small>
+            <input type="text" name="farmacos" placeholder="Fármacos">
+            <small>Antiguo: {{ receta.duracionDias }} dias</small>
+            <input type="number" name="duracionDias" placeholder="Duración en días">
+            <small>Antiguo: {{ receta.unidades }} unidades</small>
+            <input type="number" name="unidades" placeholder="Unidades">
+            <small>Antiguo: Cada {{ receta.cadaCuantasHoras }} horas</small>
+            <input type="number" name="cadaCuantasHoras" placeholder="Cada cuantas horas">
+
+
+            <button class="btn btn-outlined btn-primary acceder">Crear prescripcion</button>
+
+        </form>
+                {% endif %}
+        {% endif %}
+    </center>
+</div><!-- /.content -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mail</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/css/ratchet-theme-ios.min.css' %}">
+    <link rel="stylesheet" href="{% static 'gestion/dist/nueva_receta.css' %}">
+</head>
+<body>
+<header class="bar bar-nav">
+    <button class="btn btn-link btn-nav pull-left" style='color:white;margin-left:10px;'>
+        Médico
+    </button>
+
+    <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
+        <span class="icon icon-home"></span>
+        {{ username }}
+    </button>
+    <h1 class="title">Modificar Receta</h1>
+</header>
+
+<div class="content">
+    <center>
+        <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
+        {% if error %}
+            <h2>{{ error }}</h2>
+            <a href="/"><button class="btn btn-outlined btn-primary acceder">Regresar</button>  </a>
+        {% else %}
+            {% if exito %}
+                <h2>{{ exito }}</h2>
+            {% else %}
+                <br>
+                <br>
+                <b>Receta a DNI:</b> {{ receta.paciente.dni }} creada el {{ receta.fecha }}<br><br>
+                <b>Farmacos:</b> {{ receta.farmacos }}<br><br>
+                <b>Duracion:</b> {{ receta.duracionDias }} dias<br><br>
+                <b>Tomas:</b> {{ receta.unidades }} cada {{ receta.cadaCuantasHoras }}<br><br>
+                <b>La ultima vez que fue dispensada fue: </b>{{ receta.fechaDispensacion }}
+                <br><br>
+                <form class="formulario" action="/dispensar-receta/{{ receta.id }}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-outlined btn-primary acceder">Dispensar</button>
+                </form>
+
+            {% endif %}
+        {% endif %}
+    </center>
+</div><!-- /.content -->
+</body>
+</html>

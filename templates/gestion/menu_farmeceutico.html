@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <title>Mail</title>
@@ -29,7 +29,7 @@
     <center>
       <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
       <div class='formulario'>
-        <button class="btn btn-positive btn-outlined acceder" style='margin-right:35px;'>Nuevo cliente</button>
+       <a href="/buscar-paciente-farmaceutico"> <button class="btn btn-positive btn-outlined acceder" style='margin-right:35px;'>Nuevo cliente</button></a>
         <button class="btn btn-primary btn-outlined acceder">Revisar stock</button>
         <br>
        <a href="/logout"> <button class="btn btn-negative btn-outlined acceder" style='margin-top:95px;'>Terminar</button></a>

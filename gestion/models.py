@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from datetime import datetime
 # Create your models here.
 
 class Medico(models.Model):
@@ -58,6 +59,9 @@ class Receta(models.Model):
     duracionDias = models.IntegerField()
     unidades = models.IntegerField()
     cadaCuantasHoras = models.IntegerField()
+    fecha = models.DateTimeField(default=datetime.now,blank=True)
+    fechaDispensacion =  models.DateTimeField(blank=True)
+
     def __str__(self):
         return self.paciente.nombre+': '+self.farmacos
     class Meta:
