@@ -256,3 +256,27 @@ class DispensarRecetaView(View):
                 "username":request.user.username
         }
         return  render(request, 'gestion/dispensar_receta.html', context)
+
+class MostrarPacienteView(View):
+    @method_decorator(login_required(login_url='/login/'))
+    def get(self, request):
+        context={
+            "username":request.user
+        }
+        return render(request, 'gestion/buscar_recetas_usuarios.html', context)
+    @method_decorator(login_required(login_url='/login/'))
+    def post(self, request):
+        form = request.POST
+        if form.get('dni')!=None:
+            dni = form.get('dni')
+
+        pacienteObj = Paciente.objects.get(dni=dni)
+
+        recetas = Receta.objects.filter(paciente = pacienteObj)
+        context={
+            "username":request.user.username,
+            "paciente":pacienteObj,
+            "recetas":recetas
+
+        }
+        return  render(request, 'gestion/recetas_usuarios_NO_modificable.html', context)

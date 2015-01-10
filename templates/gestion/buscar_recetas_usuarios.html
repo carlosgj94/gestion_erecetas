@@ -38,9 +38,9 @@
             {% if exito %}
                 <h2>{{ exito }}</h2>
                 {% else %}
-        <form class="formulario" action="/buscar-paciente/" method="post">
+        <form class="formulario" action="/mostrar-paciente/" method="post">
             {% csrf_token %}
-            <input type="text" name="dni" placeholder="Tarjeta sanitaria paciente">
+            <input type="text" name="dni" placeholder="Tarjeta sanitaria del paciente">
 
             <button class="btn btn-outlined btn-primary acceder">Buscar paciente</button>
 

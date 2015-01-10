@@ -15,38 +15,29 @@
 <body>
 <header class="bar bar-nav">
     <a href="/">
-        <button class="btn btn-link btn-nav pull-left" style='color:white;margin-left:10px;'>
+    <button class="btn btn-link btn-nav pull-left" style='color:white;margin-left:10px;'>
         Médico
     </button>
-</a>
-    <a href="/">
+        </a>
+<a href="/">
     <button class="btn btn-link btn-nav pull-right" style='color:white;margin-right:10px;'>
         <span class="icon icon-home"></span>
         {{ username }}
     </button>
-        </a>
-    <h1 class="title">Buscar paciente</h1>
+    </a>
+    <h1 class="title">Recetas de {{ paciente.nombre }}</h1>
 </header>
 
 <div class="content">
     <center>
         <img src="{% static 'gestion/SaludMadrid.gif' %}" alt="SaludMadrid" style="padding-top:5%;"/>
-        {% if error %}
-        <h2>{{ error }}</h2>
-        <a href="/"><button class="btn btn-outlined btn-primary acceder">Regresar</button>  </a>
-        {% else %}
-            {% if exito %}
-                <h2>{{ exito }}</h2>
-                {% else %}
-        <form class="formulario" action="/buscar-paciente/" method="post">
-            {% csrf_token %}
-            <input type="text" name="dni" placeholder="Tarjeta sanitaria paciente">
-
-            <button class="btn btn-outlined btn-primary acceder">Buscar paciente</button>
-
-        </form>
-                {% endif %}
-        {% endif %}
+        {% for receta in recetas %}
+            <br>
+            Farmaco: - {{ receta.farmacos }} <br>
+           Recetada por: {{ receta.medico }} <br>
+            <small>{{ receta.fecha }}</small>
+            <br><br>
+        {% endfor %}
     </center>
 </div><!-- /.content -->
 </body>
