@@ -112,15 +112,15 @@ class NuevaRecetaView(View):
              return render(request, 'gestion/nueva_receta.html', context)
         if medico!=None:
             form = request.POST
-            dniP = form.get('dni')
+            tarjeta_sanitariaP = form.get('dni')
             farmacos = form.get('farmacos')
             duracion = form.get('duracionDias')
             unidades = form.get("unidades")
             cadaCuantasHoras = form.get('cadaCuantasHoras')
-            print(dniP)
+
             #HAY QUE COMPROBAR AQUI QUE EL FORMULARIO NO ESTA VACIO!
             try:
-                pacienteObj = Paciente.objects.get(dni=dniP)
+                pacienteObj = Paciente.objects.get(tarjeta_sanitaria=tarjeta_sanitariaP)
             except Paciente.DoesNotExist:
                 pacienteObj=None
             user = request.user
@@ -147,9 +147,9 @@ class BuscarPacienteView(View):
     def post(self, request):
         form = request.POST
         if form.get('dni')!=None:
-            dni = form.get('dni')
+            tarjeta_sanitaria = form.get('dni')
 
-        pacienteObj = Paciente.objects.get(dni=dni)
+        pacienteObj = Paciente.objects.get(tarjeta_sanitaria=tarjeta_sanitaria)
 
         recetas = Receta.objects.filter(paciente = pacienteObj)
         context={
@@ -218,9 +218,9 @@ class BuscarPacienteFarmaceuticoView(View):
     def post(self, request):
         form = request.POST
         if form.get('dni')!=None:
-            dni = form.get('dni')
+            tarjeta_sanitaria = form.get('dni')
 
-        pacienteObj = Paciente.objects.get(dni=dni)
+        pacienteObj = Paciente.objects.get(tarjeta_sanitaria=tarjeta_sanitaria)
 
         recetas = Receta.objects.filter(paciente = pacienteObj)
         context={
@@ -268,9 +268,9 @@ class MostrarPacienteView(View):
     def post(self, request):
         form = request.POST
         if form.get('dni')!=None:
-            dni = form.get('dni')
+            tarjeta_sanitaria = form.get('dni')
 
-        pacienteObj = Paciente.objects.get(dni=dni)
+        pacienteObj = Paciente.objects.get(tarjeta_sanitaria=tarjeta_sanitaria)
 
         recetas = Receta.objects.filter(paciente = pacienteObj)
         context={

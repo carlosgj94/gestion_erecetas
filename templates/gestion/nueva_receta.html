@@ -40,14 +40,14 @@
                 {% else %}
         <form class="formulario" action="/nueva-receta/" method="post">
             {% csrf_token %}
-            <input type="text" name="dni" placeholder="DNI paciente">
+            <input type="text" name="dni" placeholder="Tarjeta sanitaria del paciente">
             <input type="text" name="farmacos" placeholder="Fármacos">
             <input type="number" name="duracionDias" placeholder="Duración en días">
             <input type="number" name="unidades" placeholder="Unidades">
             <input type="number" name="cadaCuantasHoras" placeholder="Cada cuantas horas">
 
 
-            <button class="btn btn-outlined btn-primary acceder">Crear prescripcion</button>
+            <button class="btn btn-outlined btn-primary acceder">Crear prescripción</button>
 
         </form>
                 {% endif %}

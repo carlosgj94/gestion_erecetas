@@ -41,7 +41,7 @@ class Paciente(models.Model):
     """
     nombre= models.CharField(max_length=50)
     age= models.DateField()
-    dni= models.CharField(max_length=9)
+    tarjeta_sanitaria= models.CharField(max_length=16)
     def __str__(self):
         return self.nombre
     class Meta:
