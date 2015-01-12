@@ -49,7 +49,10 @@
                 <br><br>
                 <form class="formulario" action="/dispensar-receta/{{ receta.id }}" method="post">
                     {% csrf_token %}
-                    <button class="btn btn-outlined btn-primary acceder">Dispensar</button>
+                    {% if receta.fechaDispensacion == None %}<button class="btn btn-outlined btn-primary acceder">Dispensar</button>
+                        {% else %}
+                        Receta ya dispensada
+                        {% endif %}
                 </form>
 
             {% endif %}
