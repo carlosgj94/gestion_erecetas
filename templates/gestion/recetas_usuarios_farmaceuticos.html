@@ -35,6 +35,10 @@
             <br>
         <a href="/dispensar-receta/{{ receta.id }}"><small>{{ receta.fecha }}</small><br>
             {{ receta.medico }} - {{ receta.farmacos }}</a>
+            {% if receta.fechaDispensacion == None %}
+                        {% else %}
+                      <br> <small> (Receta ya dispensada)</small>
+                        {% endif %}
             <br><br>
         {% endfor %}
     </center>
