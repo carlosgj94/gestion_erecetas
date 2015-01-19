@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1440aad9-0398-4813-af12-776281e9bbf4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/gestion/recetas_usuarios_farmaceuticos.html" afterPath="$PROJECT_DIR$/templates/gestion/recetas_usuarios_farmaceuticos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gestion_erecetas.iws" />
@@ -50,7 +49,7 @@
       <file leaf-file-name="recetas_usuarios_NO_modificable.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/gestion/recetas_usuarios_NO_modificable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8461537" vertical-offset="401" max-vertical-offset="850">
+            <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="850">
               <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
@@ -102,7 +101,7 @@
       <file leaf-file-name="dispensar_receta.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/gestion/dispensar_receta.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="544" max-vertical-offset="1173">
+            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1173">
               <caret line="54" column="35" selection-start-line="51" selection-start-column="20" selection-end-line="54" selection-end-column="35" />
               <folding />
             </state>
@@ -112,8 +111,8 @@
       <file leaf-file-name="recetas_usuarios_farmaceuticos.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/gestion/recetas_usuarios_farmaceuticos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6491647" vertical-offset="391" max-vertical-offset="901">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.5324074" vertical-offset="365" max-vertical-offset="901">
+              <caret line="35" column="82" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -622,7 +621,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17627119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17627119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -739,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1003">
           <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1003">
           <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1003">
           <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,7 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1003">
           <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1003">
           <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/gestion/recetas_usuarios_NO_modificable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8461537" vertical-offset="401" max-vertical-offset="850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="850">
           <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
         </state>
@@ -1075,7 +1069,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/gestion/dispensar_receta.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="544" max-vertical-offset="1173">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1173">
           <caret line="54" column="35" selection-start-line="51" selection-start-column="20" selection-end-line="54" selection-end-column="35" />
           <folding />
         </state>
@@ -1083,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/gestion/recetas_usuarios_farmaceuticos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6491647" vertical-offset="391" max-vertical-offset="901">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.5324074" vertical-offset="365" max-vertical-offset="901">
+          <caret line="35" column="82" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
           <folding />
         </state>
       </provider>
